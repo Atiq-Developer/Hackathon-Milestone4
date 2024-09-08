@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Professional Editable Resume</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <h1>Professional Editable Resume</h1>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+      <!-- Personal Information Section -->
+      <section class="resume-section" id="personal-info-section">
+        <h2>Personal Information</h2>
+        <div class="editable" id="name" contenteditable="true">Full Name</div>
+        <div class="editable" id="email" contenteditable="true">
+          Email: example@example.com
+        </div>
+        <div class="editable" id="phone" contenteditable="true">
+          Phone: +123456789
+        </div>
+        <div class="editable" id="profile-summary" contenteditable="true">
+          A brief professional profile summary goes here...
+        </div>
+      </section>
+
+      <!-- Resume Sections -->
+      <section class="resume-section" id="education-section">
+        <h2>Education</h2>
+        <div class="editable" contenteditable="true">
+          Bachelor of Science in Computer Science - University A
+        </div>
+      </section>
+
+      <section class="resume-section" id="work-experience-section">
+        <h2>Work Experience</h2>
+        <div class="editable" contenteditable="true">
+          Software Developer at Company X (2020 - Present)
+        </div>
+      </section>
+
+      <section class="resume-section" id="skills-section">
+        <h2>Skills</h2>
+        <div class="editable" contenteditable="true">
+          JavaScript, TypeScript, React, Node.js, CSS, HTML
+        </div>
+      </section>
+
+      <!-- Generate Resume Button -->
+      <button id="generate-resume-btn" class="btn">Generate Resume</button>
+
+      <!-- Button to trigger modal for adding new section -->
+      <button id="add-section-btn" class="btn">Add New Section</button>
+    </main>
+
+    <!-- Modal for Adding New Section -->
+    <div id="add-section-modal" class="modal">
+      <div class="modal-content">
+        <span class="close-btn">&times;</span>
+        <h2>Add New Section</h2>
+        <label for="section-title">Section Title:</label>
+        <input
+          type="text"
+          id="section-title"
+          placeholder="e.g., Certifications"
+        />
+
+        <label for="section-content">Section Content:</label>
+        <textarea
+          id="section-content"
+          rows="4"
+          placeholder="Enter details..."
+        ></textarea>
+
+        <button id="save-section-btn" class="btn">Save Section</button>
+      </div>
+    </div>
+
+    <!-- Modal for Viewing Generated Resume -->
+    <div id="generated-resume-modal" class="modal">
+      <div class="modal-content">
+        <span class="close-btn">&times;</span>
+        <h2>Your Generated Resume</h2>
+        <div id="generated-resume-content"></div>
+      </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="app.js"></script>
+  </body>
+</html>
